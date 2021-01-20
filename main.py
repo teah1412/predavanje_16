@@ -7,7 +7,7 @@ def index():
     return render_template("index.html")
 
 @app.route("/about-me")
-def index():
+def aboutme():
     return render_template("about-me.html")
 
 
