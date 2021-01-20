@@ -2,11 +2,11 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route ("/")
+@app.route("/")
 def index():
     return render_template("index.html")
 
-@app.route ("/about-me")
+@app.route("/about-me")
 def index():
     return render_template("about-me.html")
 
