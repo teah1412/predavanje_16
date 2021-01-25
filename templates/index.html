@@ -1,27 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="/static/css/style.css">
-</head>
-<body>
+{% extends "base.html" %}
 
-<h1>Homepage</h1>
+{% block title %}Homepage{% endblock title %}
+
+{% block content %}
+
+    <h2>Ovo je sadržaj na index.html</h2>
+
+    <p>{{some_text}}</p>
+
+    <p>Godina: {{current_year}}</p>
+
+    {% for city in cities %}
+
+        <p>{{city}}</p>
+
+    {% endfor %}
+
+    {% if cities %}
+        <p>The cities variable exists.</p>
+    {% else %}
+        <p>There are no cities :(</p>
+    {% endif %}
 
 
+    <p>Jinja je baš super!</p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
-</html>
+{% endblock content %}
